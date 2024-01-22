@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by DEV-HUB
+Join our discord server dc.dev-hub.pl-->
+<CVehicleModelInfoVariation>
+	<variationData>
+		<Item>
+			<modelName>emsexpress</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">
+						0
+						0
+						131
+						0
+						0
+						0
+					</indices>
+					<liveries>
+						<Item value="true"/>
+						<Item value="false"/>
+						<Item value="false"/>
+						<Item value="false"/>
+						<Item value="false"/>
+						<Item value="false"/>
+						<Item value="false"/>
+						<Item value="false"/>
+						<Item value="false"/>
+						<Item value="false"/>
+					</liveries>
+				</Item>
+			</colors>
+			<kits>
+				<Item>4038_emsexpress_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges/>
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>police guv plate</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="437"/>
+			<sirenSettings value="198"/>
+		</Item>
+	</variationData>
+</CVehicleModelInfoVariation>
