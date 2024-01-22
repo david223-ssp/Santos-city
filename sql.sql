@@ -16,10 +16,12 @@
 
 
 -- A despejar estrutura da base de dados para santos
+DROP DATABASE IF EXISTS `santos`;
 CREATE DATABASE IF NOT EXISTS `santos` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci */;
 USE `santos`;
 
 -- A despejar estrutura para tabela santos.apartments
+DROP TABLE IF EXISTS `apartments`;
 CREATE TABLE IF NOT EXISTS `apartments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
@@ -29,11 +31,10 @@ CREATE TABLE IF NOT EXISTS `apartments` (
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- A despejar dados para tabela santos.apartments: ~0 rows (aproximadamente)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- A despejar estrutura para tabela santos.bank_accounts
+DROP TABLE IF EXISTS `bank_accounts`;
 CREATE TABLE IF NOT EXISTS `bank_accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -48,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `bank_accounts` (
 -- A despejar dados para tabela santos.bank_accounts: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.bank_statements
+DROP TABLE IF EXISTS `bank_statements`;
 CREATE TABLE IF NOT EXISTS `bank_statements` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -63,6 +65,7 @@ CREATE TABLE IF NOT EXISTS `bank_statements` (
 -- A despejar dados para tabela santos.bank_statements: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.bans
+DROP TABLE IF EXISTS `bans`;
 CREATE TABLE IF NOT EXISTS `bans` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -81,6 +84,7 @@ CREATE TABLE IF NOT EXISTS `bans` (
 -- A despejar dados para tabela santos.bans: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.crypto
+DROP TABLE IF EXISTS `crypto`;
 CREATE TABLE IF NOT EXISTS `crypto` (
   `crypto` varchar(50) NOT NULL DEFAULT 'qbit',
   `worth` int(11) NOT NULL DEFAULT 0,
@@ -91,6 +95,7 @@ CREATE TABLE IF NOT EXISTS `crypto` (
 -- A despejar dados para tabela santos.crypto: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.crypto_transactions
+DROP TABLE IF EXISTS `crypto_transactions`;
 CREATE TABLE IF NOT EXISTS `crypto_transactions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -104,6 +109,7 @@ CREATE TABLE IF NOT EXISTS `crypto_transactions` (
 -- A despejar dados para tabela santos.crypto_transactions: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.dealers
+DROP TABLE IF EXISTS `dealers`;
 CREATE TABLE IF NOT EXISTS `dealers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '0',
@@ -116,6 +122,7 @@ CREATE TABLE IF NOT EXISTS `dealers` (
 -- A despejar dados para tabela santos.dealers: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.gloveboxitems
+DROP TABLE IF EXISTS `gloveboxitems`;
 CREATE TABLE IF NOT EXISTS `gloveboxitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(8) NOT NULL DEFAULT '[]',
@@ -127,6 +134,7 @@ CREATE TABLE IF NOT EXISTS `gloveboxitems` (
 -- A despejar dados para tabela santos.gloveboxitems: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.houselocations
+DROP TABLE IF EXISTS `houselocations`;
 CREATE TABLE IF NOT EXISTS `houselocations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
@@ -143,6 +151,7 @@ CREATE TABLE IF NOT EXISTS `houselocations` (
 -- A despejar dados para tabela santos.houselocations: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.house_plants
+DROP TABLE IF EXISTS `house_plants`;
 CREATE TABLE IF NOT EXISTS `house_plants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `building` varchar(50) DEFAULT NULL,
@@ -162,6 +171,7 @@ CREATE TABLE IF NOT EXISTS `house_plants` (
 -- A despejar dados para tabela santos.house_plants: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.lapraces
+DROP TABLE IF EXISTS `lapraces`;
 CREATE TABLE IF NOT EXISTS `lapraces` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -177,6 +187,7 @@ CREATE TABLE IF NOT EXISTS `lapraces` (
 -- A despejar dados para tabela santos.lapraces: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.occasion_vehicles
+DROP TABLE IF EXISTS `occasion_vehicles`;
 CREATE TABLE IF NOT EXISTS `occasion_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `seller` varchar(50) DEFAULT NULL,
@@ -193,6 +204,7 @@ CREATE TABLE IF NOT EXISTS `occasion_vehicles` (
 -- A despejar dados para tabela santos.occasion_vehicles: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.phone_gallery
+DROP TABLE IF EXISTS `phone_gallery`;
 CREATE TABLE IF NOT EXISTS `phone_gallery` (
   `citizenid` varchar(11) NOT NULL,
   `image` varchar(255) NOT NULL,
@@ -202,6 +214,7 @@ CREATE TABLE IF NOT EXISTS `phone_gallery` (
 -- A despejar dados para tabela santos.phone_gallery: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.phone_invoices
+DROP TABLE IF EXISTS `phone_invoices`;
 CREATE TABLE IF NOT EXISTS `phone_invoices` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -216,6 +229,7 @@ CREATE TABLE IF NOT EXISTS `phone_invoices` (
 -- A despejar dados para tabela santos.phone_invoices: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.phone_messages
+DROP TABLE IF EXISTS `phone_messages`;
 CREATE TABLE IF NOT EXISTS `phone_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -229,6 +243,7 @@ CREATE TABLE IF NOT EXISTS `phone_messages` (
 -- A despejar dados para tabela santos.phone_messages: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.phone_tweets
+DROP TABLE IF EXISTS `phone_tweets`;
 CREATE TABLE IF NOT EXISTS `phone_tweets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -246,6 +261,7 @@ CREATE TABLE IF NOT EXISTS `phone_tweets` (
 -- A despejar dados para tabela santos.phone_tweets: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.players
+DROP TABLE IF EXISTS `players`;
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) NOT NULL,
@@ -264,11 +280,10 @@ CREATE TABLE IF NOT EXISTS `players` (
   KEY `id` (`id`),
   KEY `last_updated` (`last_updated`),
   KEY `license` (`license`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- A despejar dados para tabela santos.players: ~0 rows (aproximadamente)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- A despejar estrutura para tabela santos.playerskins
+DROP TABLE IF EXISTS `playerskins`;
 CREATE TABLE IF NOT EXISTS `playerskins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) NOT NULL,
@@ -278,11 +293,10 @@ CREATE TABLE IF NOT EXISTS `playerskins` (
   PRIMARY KEY (`id`),
   KEY `citizenid` (`citizenid`),
   KEY `active` (`active`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- A despejar dados para tabela santos.playerskins: ~0 rows (aproximadamente)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- A despejar estrutura para tabela santos.player_contacts
+DROP TABLE IF EXISTS `player_contacts`;
 CREATE TABLE IF NOT EXISTS `player_contacts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -296,6 +310,7 @@ CREATE TABLE IF NOT EXISTS `player_contacts` (
 -- A despejar dados para tabela santos.player_contacts: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.player_houses
+DROP TABLE IF EXISTS `player_houses`;
 CREATE TABLE IF NOT EXISTS `player_houses` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
   `house` varchar(50) NOT NULL,
@@ -315,6 +330,7 @@ CREATE TABLE IF NOT EXISTS `player_houses` (
 -- A despejar dados para tabela santos.player_houses: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.player_mails
+DROP TABLE IF EXISTS `player_mails`;
 CREATE TABLE IF NOT EXISTS `player_mails` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -332,6 +348,7 @@ CREATE TABLE IF NOT EXISTS `player_mails` (
 -- A despejar dados para tabela santos.player_mails: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.player_outfits
+DROP TABLE IF EXISTS `player_outfits`;
 CREATE TABLE IF NOT EXISTS `player_outfits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(11) DEFAULT NULL,
@@ -347,6 +364,7 @@ CREATE TABLE IF NOT EXISTS `player_outfits` (
 -- A despejar dados para tabela santos.player_outfits: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.player_vehicles
+DROP TABLE IF EXISTS `player_vehicles`;
 CREATE TABLE IF NOT EXISTS `player_vehicles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `license` varchar(50) DEFAULT NULL,
@@ -377,6 +395,7 @@ CREATE TABLE IF NOT EXISTS `player_vehicles` (
 -- A despejar dados para tabela santos.player_vehicles: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.player_warns
+DROP TABLE IF EXISTS `player_warns`;
 CREATE TABLE IF NOT EXISTS `player_warns` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `senderIdentifier` varchar(50) DEFAULT NULL,
@@ -389,17 +408,21 @@ CREATE TABLE IF NOT EXISTS `player_warns` (
 -- A despejar dados para tabela santos.player_warns: ~0 rows (aproximadamente)
 
 -- A despejar estrutura para tabela santos.stashitems
+DROP TABLE IF EXISTS `stashitems`;
 CREATE TABLE IF NOT EXISTS `stashitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `stash` varchar(255) NOT NULL DEFAULT '[]',
   `items` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   PRIMARY KEY (`stash`),
   KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- A despejar dados para tabela santos.stashitems: ~0 rows (aproximadamente)
+INSERT INTO `stashitems` (`id`, `stash`, `items`) VALUES
+	(1, 'apartment18723', '[]');
 
 -- A despejar estrutura para tabela santos.trunkitems
+DROP TABLE IF EXISTS `trunkitems`;
 CREATE TABLE IF NOT EXISTS `trunkitems` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `plate` varchar(8) NOT NULL DEFAULT '[]',
