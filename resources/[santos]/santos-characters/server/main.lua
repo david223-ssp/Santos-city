@@ -53,7 +53,7 @@ end
 RegisterNetEvent('mr-characters:server:load:user:data', function(cData)
     local src = source
     if QBCore.Player.Login(src, cData.citizenid) then
-        print('^2[mercy-characters]^7 '..GetPlayerName(src)..' (Citizen ID: '..cData.citizenid..') successfully loaded!')
+        print('^2[santos-characters]^7 '..GetPlayerName(src)..' (Citizen ID: '..cData.citizenid..') carregado com sucesso!')
         QBCore.Commands.Refresh(src)
         LoadHouseData()
         TriggerClientEvent('apartments:client:setupSpawnUI', src, cData)
@@ -67,7 +67,7 @@ RegisterNetEvent('mr-characters:server:createCharacter', function(data)
     newData.cid = data.cid
     newData.charinfo = data
     if QBCore.Player.Login(src, false, newData) then
-        print('^2[mercy-characters]^7 '..GetPlayerName(src)..' succesfully made a character!')
+        print('^2[santos-characters]^7 '..GetPlayerName(src)..' criou com sucesso uma personagem!')
         QBCore.Commands.Refresh(src)
         LoadHouseData()
         TriggerClientEvent('apartments:client:setupSpawnUI', src, newData)
@@ -82,7 +82,7 @@ end)
 
 RegisterNetEvent('mr-characters:server:disconnect', function()
     local src = source
-    DropPlayer(src, "[Mercy] You left the city!")
+    DropPlayer(src, "[Santos] Saíste da cidade!")
 end)
 
 -- [ Functions ] --
@@ -135,18 +135,18 @@ end)
 
 -- [ Commands ] --
 
-QBCore.Commands.Add("quit", "Leave the city", {}, false, function(source, args)
-    DropPlayer(source, "[Mercy] You left the city!")
+QBCore.Commands.Add("quit", "Sair da cidade", {}, false, function(source, args)
+    DropPlayer(source, "[Santos] Saíste da cidade!")
 end)
 
-QBCore.Commands.Add("logout", "Go to character selection.", {}, false, function(source, args)
+QBCore.Commands.Add("logout", "Ir para a seleção de personagens.", {}, false, function(source, args)
     UpdateInventory(source)
     QBCore.Player.Logout(source)
     Citizen.Wait(550)
     TriggerClientEvent('mr-characters:client:choose:char', source)
 end, "admin")
 
-QBCore.Commands.Add("char", "Choose a character", {{name="charnr", help="Number of character"}}, false, function(source, args)
+QBCore.Commands.Add("char", "Escolher uma personagem", {{name="charnr", help="Number of character"}}, false, function(source, args)
     local Player = QBCore.Functions.GetPlayer(source)
     if args[1] then
         local CharId = tonumber(args[1])
