@@ -19,9 +19,9 @@ Config.BrokenCuffItem = 'broken_handcuffs'
 Config.BreakOutCuffing = {active = true, duration = math.random(2500,5000), pos = math.random(10, 30), width = math.random(10, 20)}
 Config.BreakoutMinigame = 'qb-skillbar' -- Choose the cuff breakout minigame : qb-skillbar / ps-ui (circle)
 Config.PSUICOnfig = {numcircle = 2, ms = 20} -- If minigame is ps-ui then choose number of circles and ms 
-Config.TargetSystem = 'ox_target' -- Target system you want to use : qb-target / qtarget / ox_target
+Config.TargetSystem = 'qb-target' -- Target system you want to use : qb-target / qtarget / ox_target
 Config.ContextSystem = 'qb-menu' -- Menu system you want to use : qb-menu / ox_lib
-Config.Inventory = 'ps-inventory' -- Inventory system : qb-inventory, ps-inventory, ox_inventory 
+Config.Inventory = 'qb-inventory' -- Inventory system : qb-inventory, ps-inventory, ox_inventory 
 Config.StashSettings = {maxweight = 4000000, slots = 30,} -- Stash settings for qb / ps inventory
 Config.Debug = false -- Enable / Disable debugpoly 
 
