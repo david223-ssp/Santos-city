@@ -1915,3 +1915,80 @@ $("#item-give").droppable({
         );
     },
 });
+if (itemData.name == "filled_evidence_bag") {
+    $(".item-info-title").html("<p>" + itemData.label + "</p>");
+        if (itemData.info.type == "casing") {
+            if (itemData.info.evidenceNote != null) {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label + "</span></p>" +
+                    "<p><strong>Type number: </strong><span>" + itemData.info.ammotype + "</span></p>" +
+                    "<p><strong>Caliber: </strong><span>" + itemData.info.ammolabel + "</span></p>" +
+                    "<p><strong>Serial: </strong><span>" + itemData.info.serie + "</span></p>" +
+                    "<p><strong>Crime scene: </strong><span>" + itemData.info.street + "</span></p>" +
+                    "<br /><p><strong>Note Writer: </strong><span>" + itemData.info.noteWrite + "</span></p>" +
+                    "<p><strong>Note: </strong><span>" + itemData.info.evidenceNote + "</span></p>"
+                );
+            } else {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label + "</span></p>" +
+                    "<p><strong>Type number: </strong><span>" + itemData.info.ammotype + "</span></p>" +
+                    "<p><strong>Caliber: </strong><span>" + itemData.info.ammolabel + "</span></p>" +
+                    "<p><strong>Serial: </strong><span>" + itemData.info.serie + "</span></p>" +
+                    "<p><strong>Crime scene: </strong><span>" + itemData.info.street + "</span></p>" +
+                    "<br /><p>" + itemData.description +"</p>"
+                );
+            }
+        } else if (itemData.info.type == "blood") {
+            if (itemData.info.evidenceNote != null) {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label +"</span></p>" +
+                    "<p><strong>Blood type: </strong><span>" + itemData.info.bloodtype +"</span></p>" +
+                    "<p><strong>DNA Code: </strong><span>" + itemData.info.dnalabel +"</span></p>" +
+                    "<p><strong>Crime scene: </strong><span>" + itemData.info.street +"</span></p>" +
+                    "</br><p><strong>Note Writer: </strong><span>" + itemData.info.noteWrite + "</span></p>" +
+                    "<p><strong>Note: </strong><span>" + itemData.info.evidenceNote + "</span></p>"
+                );
+            } else {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label +"</span></p>" +
+                    "<p><strong>Blood type: </strong><span>" + itemData.info.bloodtype +"</span></p>" +
+                    "<p><strong>DNA Code: </strong><span>" + itemData.info.dnalabel +"</span></p>" +
+                    "<p><strong>Crime scene: </strong><span>" + itemData.info.street +"</span></p>" +
+                    "<br /><p>" + itemData.description + "</p>"
+                );
+            }
+        } else if (itemData.info.type == "fingerprint") {
+            if (itemData.info.evidenceNote != null) {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label + "</span></p>" +
+                    "<p><strong>Fingerprint: </strong><span>" + itemData.info.fingerprint + "</span></p>" +
+                    "<p><strong>Crime Scene: </strong><span>" + itemData.info.street + "</span></p>" +
+                    "</br><p><strong>Note Writer: </strong><span>" + itemData.info.noteWrite + "</span></p>" +
+                    "<p><strong>Note: </strong><span>" + itemData.info.evidenceNote + "</span></p>"
+                );
+            } else {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label + "</span></p>" +
+                    "<p><strong>Fingerprint: </strong><span>" + itemData.info.fingerprint + "</span></p>" +
+                    "<p><strong>Crime Scene: </strong><span>" + itemData.info.street + "</span></p>" +
+                    "<br /><p>" + itemData.description + "</p>"
+                );
+            }
+
+        } else if (itemData.info.type == "dna") {
+            if (itemData.info.evidenceNote != null) {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label + "</span></p>" +
+                    "<p><strong>DNA Code: </strong><span>" + itemData.info.dnalabel + "</span></p>" +
+                    "</br><p><strong>Note Writer: </strong><span>" + itemData.info.noteWrite + "</span></p>" +
+                    "<p><strong>Note: </strong><span>" + itemData.info.evidenceNote + "</span></p>"
+                );
+            } else {
+                $(".item-info-description").html(
+                    "<p><strong>Evidence material: </strong><span>" + itemData.info.label + "</span></p>" +
+                    "<p><strong>DNA Code: </strong><span>" + itemData.info.dnalabel + "</span></p>" +
+                    "<br /><p>" + itemData.description + "</p>"
+                );
+            }
+        }
+    }
