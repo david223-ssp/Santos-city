@@ -392,5 +392,6 @@ QBShared.Items = {
 	['flush_cutter'] 				 = {['name'] = 'flush_cutter', 			    	['label'] = 'Flush Cutter', 			['weight'] = 50, 		['type'] = 'item', 		['image'] = 'flush_cutter.png', 		['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'É muito útil quando se pretende cortar fechos de correr...'},
 	['bolt_cutter'] 				 = {['name'] = 'bolt_cutter', 			    	['label'] = 'Bolt Cutter', 				['weight'] = 50, 		['type'] = 'item', 		['image'] = 'bolt_cutter.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Quer cortar alguns objectos de metal?'},
     ['leo-gps']                      = {['name'] = 'leo-gps',                       ['label'] = 'LEO GPS',                  ['weight'] = 2000,      ['type'] = 'item',      ['image'] = 'leo-gps.png',              ['unique'] = true,      ['useable'] = true,     ['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'Mostrar a sua localização gps a outros'},
-
+    --pawnshop
+    ['chain_v']                      = {['name'] = 'chain_v',                       ['label'] = 'Beautiful Chain',          ['weight'] = 100,       ['type'] = 'item',      ['image'] = 'chain_v.png',              ['unique'] = true,      ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Criado pelas mãos de um especialista da Loja de Penhores para ser usado por si.'},
 }

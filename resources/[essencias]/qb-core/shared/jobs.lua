@@ -139,4 +139,16 @@ QBShared.Jobs = {
 			['4'] = { name = 'Manager', isboss = true, payment = 150 },
 		},
 	},
+	pawnshop = {
+		label = 'Pawner', 
+		defaultDuty = false, 
+		offDutyPay = false,
+		grades = {
+		['0'] = {name = 'Cleaner', payment = 50},
+		['1'] = {name = 'Delivery', payment = 75},
+		['2'] = {name = 'Smelter', payment = 100},
+		['3'] = {name = 'Crafter', payment = 125},
+		['4'] = {name = 'Manager/Owner', isboss = true, payment = 150},
+	   },
+    },
 }
