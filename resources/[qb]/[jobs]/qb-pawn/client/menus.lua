@@ -1,5 +1,5 @@
 Citizen.CreateThread(function()
-	exports['qb-target']:AddBoxZone("pawnDuty", vector3(131.22,-1775.41,29.76), 1, 1.2, {
+	exports['qb-target']:AddBoxZone("pawnDuty", vector3(129.51,-1777.85,29.44), 1, 1.2, { --los santos
 		name = "Pawnshop Duty",
 		heading = 53.2,
 		debugpoly = false,
@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
 		distance = 2.5
 	})
 
-		exports['qb-target']:AddBoxZone("pawntray1", vector3(175.74, -1317.04, 30.33), 0.5, 0.7, {
+		exports['qb-target']:AddBoxZone("pawntray1", vector3(175.74, -1317.04, 30.33), 0.5, 0.7, {  --los santos
 			name = "pawntray1",
 			heading = 87.8,
 			debugpoly = false,
@@ -68,7 +68,7 @@ Citizen.CreateThread(function()
 		distance = 3.5
 	})
 
-        exports['qb-target']:AddBoxZone("pawnStorage", vector3(169.25, -1316.03, 29.34), 1.6, 1, {
+        exports['qb-target']:AddBoxZone("pawnStorage", vector3(127.53, -1777.57, 29.73) , 1.6, 1, {  --los santos
             name="Pawn Storage",
             heading=58.88,
             debugpoly = false,
@@ -104,7 +104,7 @@ Citizen.CreateThread(function()
                     distance = 1.5
                 })
 
-        exports['qb-target']:AddBoxZone("craftingStation", vector3(171.68, -1315.93, 29.34), 0.7, 1.5, {
+        exports['qb-target']:AddBoxZone("craftingStation", vector3(126.32, -1779.4, 29.73), 0.7, 1.5, { --los santos
             name="Crafting Station",
             heading=91.25,
             debugPoly=false,
@@ -122,7 +122,7 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-        exports['qb-target']:AddBoxZone("pawn_register_1", vector3(132.36,-1776.97,29.63), 0.5, 0.4, {  --feito
+        exports['qb-target']:AddBoxZone("pawn_register_1", vector3(132.36,-1776.97,29.63), 0.5, 0.4, {  --los santos
             name="pawn_register_1",
             debugpoly = false,
             heading=233.89,
@@ -141,7 +141,7 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-        exports['qb-target']:AddBoxZone("pawn_register_2", vector3(-584.25, -1061.5, 22.37), 0.6, 0.5, {
+        exports['qb-target']:AddBoxZone("pawn_register_2", vector3(130.92,-1775.32,29.79), 0.5, 0.4, {  --feito
             name="pawn_register_2",
             debugpoly = false,
             heading=270,
