@@ -2,7 +2,7 @@ Config = {}
 
 Config.PawnLocation = {
     [1] = {
-            coords = vector3(168.1, -1311.13, 29.34),
+            coords = vector3(137.52, -1777.24, 29.71),
             length = 1.5,
             width = 1.8,
             heading = 207.0,

@@ -1,5 +1,5 @@
 Citizen.CreateThread(function()
-	exports['qb-target']:AddBoxZone("pawnDuty", vector3(163.86, -1318.61, 29.34), 1, 1.2, {
+	exports['qb-target']:AddBoxZone("pawnDuty", vector3(131.22,-1775.41,29.76), 1, 1.2, {
 		name = "Pawnshop Duty",
 		heading = 53.2,
 		debugpoly = false,
@@ -122,7 +122,7 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-        exports['qb-target']:AddBoxZone("pawn_register_1", vector3(173.69, -1317.48, 30.63), 0.5, 0.4, {
+        exports['qb-target']:AddBoxZone("pawn_register_1", vector3(132.36,-1776.97,29.63), 0.5, 0.4, {  --feito
             name="pawn_register_1",
             debugpoly = false,
             heading=233.89,
